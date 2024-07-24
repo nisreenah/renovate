@@ -90,7 +90,7 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        $inputs = $request->all();
+        $inputs = $request->except('gallery');
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -100,6 +100,17 @@ class ProjectController extends Controller
         }
 
         $project->update($inputs);
+
+        if ($request->hasFile('gallery')) {
+            $gallery = $request->file('gallery');
+            foreach ($gallery as $file) {
+                $filename = date('YmdHi') . $file->getClientOriginalName();
+                $file->move(public_path('upload/projects/gallery'), $filename);
+                $galleryInputs['image'] = $filename;
+                $galleryInputs['project_id'] = $project->id;
+                PhotoGallery::create($galleryInputs);
+            }
+        }
 
         $notification = array(
             'message' => 'Project updated successfully.',

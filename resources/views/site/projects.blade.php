@@ -33,7 +33,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="portfolio-style-custom-4 rts-portfolio__item">
                             <a href="{{ route('site.project-details', $project->slug) }}" class="thumbnail">
-                                <img src="{{ asset('upload/projects/'.$project->image) }}" alt="prodcut">
+                                <img style="height: 500px !important" src="{{ asset('upload/projects/'.$project->image) }}" alt="{{ $project->name }}">
                             </a>
                             <div class="inner-content">
                                 <a href="{{ route('site.project-details', $project->slug) }}">
