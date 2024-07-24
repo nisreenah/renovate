@@ -48,16 +48,16 @@
                         <!-- ingle srevice area start -->
                         <div class="singe-serice-style-two">
                             <a href="{{ route('site.service-details', $service->slug) }}" class="thumbnail">
-                                <img src="{{ asset('upload/services/'. $service->image) }}" alt="{{ $service->title }}">
+                                <img style="height: 400px !important" src="{{ asset('upload/services/'. $service->image) }}" alt="{{ $service->title }}">
                             </a>
                             <div class="body">
-                                <div class="wrapper">
+                                <div class="wrapper bg-light">
                                     <div class="icon-area">
                                         <span>{{ $loop->iteration }}</span>
                                     </div>
                                     <div class="inner">
                                         <h6 class="title">{{ $service->title }}</h6>
-                                        <p class="disc">{{ $service->short_description }}</p>
+                                        <p class="disc">{{ substr($service->short_description,0,60)  }}</p>
                                         <a href="{{ route('site.service-details', $service->slug) }}"
                                            class="arrow-btn-read-more">
                                             Read More <i class="fa-thin fa-chevron-right"></i>

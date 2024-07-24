@@ -1,6 +1,6 @@
 <!-- header three area start -->
 <!-- rts footer area start -->
-<div class="rts-footer-area social-jumpanimation @@border">
+<div class="rts-footer-area social-jumpanimation @@border mt-3">
     <div class="rts-copyright-area-two">
         <div class="container">
             <div class="row">

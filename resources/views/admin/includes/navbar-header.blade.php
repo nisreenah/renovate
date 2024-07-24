@@ -30,11 +30,10 @@
                         </div>
                     </li>
                     <li>
-{{--                        <div class="dropdown-divider"></div>--}}
-{{--                        <a class="dropdown-item" href="{{ route('admin.contacts.index') }}">Inbox</a>--}}
                         <div class="dropdown-divider"></div>
-{{--                        <a class="dropdown-item" href="#">Account Setting</a>--}}
-{{--                        <div class="dropdown-divider"></div>--}}
+                        <a class="dropdown-item" href="{{ route('admin.aboutUs.index') }}">About Us</a>
+                        <a class="dropdown-item" href="{{ route('profile.edit') }}">Account Setting</a>
+                        <div class="dropdown-divider"></div>
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">

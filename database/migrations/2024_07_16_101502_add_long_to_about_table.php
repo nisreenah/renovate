@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('about', function (Blueprint $table) {
-            $table->decimal('`long`', 10, 7)->after('twitter')->nullable();
+            $table->decimal('long', 10, 7)->after('twitter')->nullable();
         });
     }
 

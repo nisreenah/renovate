@@ -18263,7 +18263,7 @@ a {
   position: relative;
   z-index: 5;
   padding: 30px;
-  padding-bottom: 0;
+  /*padding-bottom: 0;*/
 }
 @media only screen and (max-width: 479px) {
   .singe-serice-style-two .body .wrapper {
